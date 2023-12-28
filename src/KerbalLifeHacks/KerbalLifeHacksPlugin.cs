@@ -3,7 +3,6 @@ using JetBrains.Annotations;
 using KerbalLifeHacks.Config;
 using KerbalLifeHacks.Hacks;
 using SpaceWarp;
-using SpaceWarp.API.Configuration;
 using SpaceWarp.API.Mods;
 
 namespace KerbalLifeHacks;
