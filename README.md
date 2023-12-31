@@ -4,7 +4,6 @@ changes, or _life hacks_, that don't fit into the scope of Community Fixes.
 ## Compatibility
 - Tested with Kerbal Space Program 2 v0.2.0.0.30291
 - Requires **[SpaceWarp 1.7.0+](https://github.com/SpaceWarpDev/SpaceWarp/releases/)**
-- Requires **[Patch Manager 0.7+](https://github.com/KSP2Community/PatchManager/releases/)**
 ## Features
 Currently, this mod includes the following life hacks:
 - **VAB Mission Tracker** by [munix](https://github.com/jan-bures) - Adds the Mission Tracker button to the VAB app tray.
