@@ -7,8 +7,9 @@ changes, or _life hacks_, that don't fit into the scope of Community Fixes.
 - Requires **[Patch Manager 0.7+](https://github.com/KSP2Community/PatchManager/releases/)**
 ## Features
 Currently, this mod includes the following life hacks:
-### Category 1
-- WIP
+- **VAB Mission Tracker** by [munix](https://github.com/jan-bures) - Adds the Mission Tracker button to the VAB app tray.
+- **Disable Contrails** by [munix](https://github.com/jan-bures) - Disables contrails and wingtip vortices. Disabled by
+  default, see the [Configuration](#Configuration) section for details.
 ## Installation
 ### Recommended
 1. Use [CKAN](https://github.com/KSP-CKAN/CKAN/releases/latest) to download and install Kerbal Life Hacks.
