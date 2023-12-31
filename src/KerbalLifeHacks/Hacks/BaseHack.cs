@@ -28,11 +28,19 @@ public abstract class BaseHack : KerbalMonoBehaviour
     /// </summary>
     private protected BaseHack()
     {
-        Logger = new BepInExLogger(BepInEx.Logging.Logger.CreateLogSource($"KLH/{GetType().Name}"));
         Config = KerbalLifeHacksPlugin.Config;
+        Logger = new BepInExLogger(BepInEx.Logging.Logger.CreateLogSource($"KLH/{GetType().Name}"));
         HarmonyInstance = new Harmony(GetType().FullName);
     }
 
+    /// <summary>
+    /// Binds a config entry to a hack class.
+    /// </summary>
+    /// <param name="key">The config entry key.</param>
+    /// <param name="defaultValue">The config entry default value.</param>
+    /// <param name="description">The config entry description.</param>
+    /// <typeparam name="T">The config entry type.</typeparam>
+    /// <returns>The config entry.</returns>
     private protected ConfigEntry<T> BindConfigValue<T>(string key, T defaultValue, string description = null)
     {
         return Config.BindHackValue(GetType(), key, defaultValue, description);
