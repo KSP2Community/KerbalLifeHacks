@@ -15,8 +15,7 @@ Currently, this mod includes the following life hacks:
 ### Manual
 1. Download and extract [UITK for KSP 2](https://github.com/UitkForKsp2/UitkForKsp2/releases) into your game folder (this is a dependency of SpaceWarp).
 2. Download and extract [SpaceWarp](https://github.com/SpaceWarpDev/SpaceWarp/releases) into your game folder.
-3. Download and extract [Patch Manager](https://github.com/KSP2Community/PatchManager/releases) into your game folder.
-4. Download and extract this mod into the game folder. If done correctly, you should have the following folder structure: `<KSP Folder>/BepInEx/plugins/KerbalLifeHacks`.
+3. Download and extract this mod into the game folder. If done correctly, you should have the following folder structure: `<KSP Folder>/BepInEx/plugins/KerbalLifeHacks`.
 ## Configuration
 All life hacks can be toggled on or off in `Main menu` -> `Settings` -> `Mods` -> `Kerbal Life Hacks`. The changes will
 take effect after the game is restarted. Life hacks are enabled by default unless otherwise noted.
