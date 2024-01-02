@@ -9,6 +9,8 @@ Currently, this mod includes the following life hacks:
 - **VAB Mission Tracker** by [munix](https://github.com/jan-bures) - Adds the Mission Tracker button to the VAB app tray.
 - **Disable Contrails** by [munix](https://github.com/jan-bures) - Disables contrails and wingtip vortices. Disabled by
   default, see the [Configuration](#Configuration) section for details.
+- **Better Experiments** by [dmarcuse](https://github.com/dmarcuse) - Automatically resumes paused experiments when
+  re-entering the correct region, and ignores animation state.
 ## Installation
 ### Recommended
 1. Use [CKAN](https://github.com/KSP-CKAN/CKAN/releases/latest) to download and install Kerbal Life Hacks.
