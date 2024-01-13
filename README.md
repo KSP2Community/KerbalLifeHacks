@@ -11,6 +11,7 @@ Currently, this mod includes the following life hacks:
   default, see the [Configuration](#Configuration) section for details.
 - **Better Experiments** by [dmarcuse](https://github.com/dmarcuse) - Automatically resumes paused experiments when
   re-entering the correct region, and ignores animation state.
+- **Skip Orientation** by [tgrkzus](https://github.com/tgrkzus) - New campaigns default to skipping the orientation
 ## Installation
 ### Recommended
 1. Use [CKAN](https://github.com/KSP-CKAN/CKAN/releases/latest) to download and install Kerbal Life Hacks.
