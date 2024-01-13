@@ -5,14 +5,11 @@ using KSP.VFX;
 
 namespace KerbalLifeHacks.Hacks.SkipOrientation;
 
-[Hack("Skip Orientation")]
+[Hack("Skip Orientation", false)]
 public class SkipOrientation: BaseHack
 {
-    public static SkipOrientation Instance;
-
     public override void OnInitialized()
     {
-        Instance = this;
         HarmonyInstance.PatchAll(typeof(SkipOrientation));
     }
     
