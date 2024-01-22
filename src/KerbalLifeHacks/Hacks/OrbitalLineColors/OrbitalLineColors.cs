@@ -23,7 +23,7 @@ public class OrbitalLineColors : BaseHack
 
     private static readonly List<Color> ManeuverColors =
     [
-        new Color(1, 0, 0), // Red - first patch is the burn
+        new Color(1, 0, 0), // Red - first patch is always the burn, so this is not used
         new Color(1, 0.5f, 0), // Orange
         new Color(1, 0.5f, 0.5f), // Light Red
         new Color(1, 0.75f, 0), // Light Orange
@@ -579,7 +579,8 @@ public class OrbitalLineColors : BaseHack
     {
         var alphaFactor = isHighlighted ? 0.5f : 1.0f;
 
-        var startColor = GetSegmentColors(type)[segmentIndex % TrajectoryColors.Count]  with {a = alphaFactor};
+        var colorList = GetSegmentColors(type);
+        var startColor = colorList[segmentIndex % colorList.Count]  with {a = alphaFactor};
         var endColor = startColor * 0.75f;
 
         return (startColor, endColor);
