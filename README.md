@@ -33,3 +33,6 @@ Currently, this mod includes the following life hacks:
 ## Configuration
 All life hacks can be toggled on or off in `Main menu` -> `Settings` -> `Mods` -> `Kerbal Life Hacks`. The changes will
 take effect after the game is restarted. Life hacks are enabled by default unless otherwise noted.
+## Contributing
+If you'd like to contribute to this project, please take a look at
+[our wiki](https://github.com/KSP2Community/KerbalLifeHacks/wiki/Adding-your-hack).
