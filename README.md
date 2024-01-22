@@ -7,6 +7,9 @@ changes, or _life hacks_, that don't fit into the scope of Community Fixes.
 ## Features
 Currently, this mod includes the following life hacks:
 ### UI tweaks
+#### Flight view
+- **IVA Portraits Toggler** by [WiS3](https://github.com/WiS3) - Adds a button to the app bar to toggle the Kerbal
+  portraits panel.
 #### Map
 - **Warp To Orbital Points** by [munix](https://github.com/jan-bures) - Adds buttons to warp to apoapsis, periapsis and
   SOI change.
