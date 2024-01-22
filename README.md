@@ -12,6 +12,10 @@ Currently, this mod includes the following life hacks:
 - **Better Experiments** by [dmarcuse](https://github.com/dmarcuse) - Automatically resumes paused experiments when
   re-entering the correct region, and ignores animation state.
 - **Skip Orientation** by [tgrkzus](https://github.com/tgrkzus) - New campaigns default to skipping the orientation
+- **Warp To Orbital Points** by [munix](https://github.com/jan-bures) - Adds buttons to warp to apoapsis, periapsis and
+  SOI change.
+- **Orbital Line Colors** by [munix](https://github.com/jan-bures) - Colors the various orbital lines of the current
+  vessel to make them easier to distinguish.
 ## Installation
 ### Recommended
 1. Use [CKAN](https://github.com/KSP-CKAN/CKAN/releases/latest) to download and install Kerbal Life Hacks.
