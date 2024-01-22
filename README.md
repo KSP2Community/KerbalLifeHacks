@@ -7,6 +7,9 @@ changes, or _life hacks_, that don't fit into the scope of Community Fixes.
 ## Features
 Currently, this mod includes the following life hacks:
 ### UI tweaks
+#### Main menu
+- **Skip Orientation** by [tgrkzus](https://github.com/tgrkzus) - New campaigns default to skipping the orientation.
+  *Disabled by default, see the [Configuration](#Configuration) section for details.*
 #### Flight view
 - **IVA Portraits Toggler** by [WiS3](https://github.com/WiS3) - Adds a button to the app bar to toggle the Kerbal
   portraits panel.
@@ -23,8 +26,6 @@ Currently, this mod includes the following life hacks:
   default, see the [Configuration](#Configuration) section for details.*
 - **Better Experiments** by [dmarcuse](https://github.com/dmarcuse) - Automatically resumes paused experiments when
   re-entering the correct region, and ignores animation state.
-- **Skip Orientation** by [tgrkzus](https://github.com/tgrkzus) - New campaigns default to skipping the orientation.
-  *Disabled by default, see the [Configuration](#Configuration) section for details.*
 ## Installation
 ### Recommended
 1. Use [CKAN](https://github.com/KSP-CKAN/CKAN/releases/latest) to download and install Kerbal Life Hacks.
