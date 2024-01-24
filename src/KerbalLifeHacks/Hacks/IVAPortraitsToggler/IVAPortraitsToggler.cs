@@ -1,6 +1,9 @@
-﻿using KSP.Game;
+﻿using System.Collections;
+using KSP.Game;
 using KSP.Messages;
+using KSP.Sim.impl;
 using SpaceWarp.API.Assets;
+using SpaceWarp.API.Game;
 using UnityEngine;
 
 namespace KerbalLifeHacks.Hacks.IVAPortraitsToggler;
@@ -11,7 +14,7 @@ public class IVAPortraitsToggler : BaseHack
     private AppBarButton _buttonBar;
 
     // ReSharper disable once InconsistentNaming, IdentifierTypo
-    private Canvas _ivaportraits_canvas;
+    private GameObject _ivaportraits;
 
     public override void OnInitialized()
     {
@@ -21,19 +24,20 @@ public class IVAPortraitsToggler : BaseHack
 
     private void OnFlightViewEnteredMessage(MessageCenterMessage msg)
     {
-        if (_ivaportraits_canvas == null)
+        if (_ivaportraits == null)
         {
             var instruments = GameManager.Instance.Game.UI.FlightHud._instruments;
             // ReSharper disable once StringLiteralTypo
             instruments.TryGetValue("group_ivaportraits", out var ivaPortraits);
             if (ivaPortraits != null)
             {
-                _ivaportraits_canvas = ivaPortraits._parentCanvas;
+                _ivaportraits = ivaPortraits._parentCanvas.gameObject;
             }
         }
 
         if (_buttonBar != null)
         {
+            _buttonBar.SetActive();
             return;
         }
 
@@ -41,9 +45,19 @@ public class IVAPortraitsToggler : BaseHack
             "IVA Portraits",
             "BTN-IVA-Portraits",
             AssetManager.GetAsset<Texture2D>($"KerbalLifeHacks/images/IVAPortraitsToggler-icon.png"),
-            ToggleIVAPortraitsCanvas,
+            SetIVAPortraitsState,
             0
         );
+        _buttonBar.SetActive();
+
+        try
+        {
+            StartCoroutine(HandleVessel(Vehicle.ActiveSimVessel.GetControlOwner().GlobalId));
+        }
+        catch
+        {
+            // ignored
+        }
     }
 
     private void OnVesselChangedMessage(MessageCenterMessage msg)
@@ -54,16 +68,23 @@ public class IVAPortraitsToggler : BaseHack
         }
 
         var vesselGuid = vessel.GetControlOwner().GlobalId;
+        StartCoroutine(HandleVessel(vesselGuid));
+    }
+
+    private IEnumerator HandleVessel(IGGuid vesselGuid)
+    {
+        yield return new WaitForUpdate();
+
         var allKerbalsInSimObject = GameManager.Instance.Game.KerbalManager._kerbalRosterManager
             ?.GetAllKerbalsInSimObject(vesselGuid);
         var state = allKerbalsInSimObject?.Count > 0;
 
-        ToggleIVAPortraitsCanvas(state);
-        _buttonBar.SetButtonState(state);
+        SetIVAPortraitsState(state);
+        _buttonBar.SetState(state);
     }
 
-    public void ToggleIVAPortraitsCanvas(bool state)
+    public void SetIVAPortraitsState(bool state)
     {
-        _ivaportraits_canvas.enabled = state;
+        _ivaportraits.SetActive(state);
     }
 }

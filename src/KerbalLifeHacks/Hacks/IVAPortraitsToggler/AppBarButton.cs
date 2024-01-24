@@ -11,6 +11,7 @@ namespace KerbalLifeHacks.Hacks.IVAPortraitsToggler;
 internal class AppBarButton
 {
     private readonly UIValue_WriteBool_Toggle _buttonState;
+    private readonly GameObject _button;
 
     public AppBarButton(
         string buttonTooltip,
@@ -35,35 +36,35 @@ internal class AppBarButton
 
         // Clone 'NonStageable-Resources' button
 
-        var barButton = UnityObject.Instantiate(nonStageableResources, list.transform);
+        _button = UnityObject.Instantiate(nonStageableResources, list.transform);
         if (siblingIndex >= 0 && siblingIndex < list.transform.childCount - 1)
         {
-            barButton.transform.SetSiblingIndex(siblingIndex);
+            _button.transform.SetSiblingIndex(siblingIndex);
         }
 
-        barButton.name = buttonId;
+        _button.name = buttonId;
 
         // Change the tooltip
-        barButton.GetComponent<BasicTextTooltipData>()._tooltipTitleKey = buttonTooltip;
+        _button.GetComponent<BasicTextTooltipData>()._tooltipTitleKey = buttonTooltip;
 
         // Change the icon
         var sprite = Appbar.GetAppBarIconFromTexture(buttonIcon);
-        var icon = barButton.GetChild("Content").GetChild("GRP-icon");
+        var icon = _button.GetChild("Content").GetChild("GRP-icon");
         var image = icon.GetChild("ICO-asset").GetComponent<Image>();
         image.sprite = sprite;
 
         // Add our function call to the toggle
-        var toggle = barButton.GetComponent<ToggleExtended>();
+        var toggle = _button.GetComponent<ToggleExtended>();
         toggle.onValueChanged.AddListener(state => function(state));
-        toggle.onValueChanged.AddListener(SetButtonState);
+        toggle.onValueChanged.AddListener(SetState);
 
         // Set the initial state of the button
-        _buttonState = barButton.GetComponent<UIValue_WriteBool_Toggle>();
+        _buttonState = _button.GetComponent<UIValue_WriteBool_Toggle>();
         _buttonState.valueKey = $"Is{buttonId}Visible";
         _buttonState.BindValue(new Property<bool>(false));
     }
 
-    public void SetButtonState(bool state)
+    public void SetState(bool state)
     {
         if (_buttonState == null)
         {
@@ -71,5 +72,15 @@ internal class AppBarButton
         }
 
         _buttonState.SetValue(state);
+    }
+
+    public void SetActive(bool isActive = true)
+    {
+        if (_button == null)
+        {
+            return;
+        }
+
+        _button.SetActive(isActive);
     }
 }

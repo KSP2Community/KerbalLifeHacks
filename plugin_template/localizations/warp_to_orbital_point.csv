@@ -1,4 +1,4 @@
-Key,Type,Desc,English
-KerbalLifeHacks/Map/WarpToAp,text,,Warp to Apoapsis
-KerbalLifeHacks/Map/WarpToPe,text,,Warp to Periapsis
-KerbalLifeHacks/Map/WarpToSOI,text,,Warp to SOI Change
+Key,Type,Desc,English,Chinese (Simplified)
+KerbalLifeHacks/Map/WarpToAp,text,,Warp to Apoapsis,时间加速至远点
+KerbalLifeHacks/Map/WarpToPe,text,,Warp to Periapsis,时间加速至近点
+KerbalLifeHacks/Map/WarpToSOI,text,,Warp to SOI Change,时间加速至引力作用范围变化
