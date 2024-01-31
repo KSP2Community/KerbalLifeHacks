@@ -21,6 +21,7 @@ Currently, this mod includes the following life hacks:
 #### VAB
 - **VAB Mission Tracker** by [munix](https://github.com/jan-bures) - Adds the Mission Tracker button to the VAB app
   tray.
+- **VAB Extended Color Manager** by [WiS3](https://github.com/WiS3) - Adds Hex/RGBA color inputs to the VAB Color Manager
 ### Gameplay
 - **Disable Contrails** by [munix](https://github.com/jan-bures) - Disables contrails and wingtip vortices. *Disabled by
   default, see the [Configuration](#Configuration) section for details.*
