@@ -18,6 +18,7 @@ Currently, this mod includes the following life hacks:
   SOI change.
 - **Orbital Line Colors** by [munix](https://github.com/jan-bures) - Colors the various orbital lines of the current
   vessel to make them easier to distinguish.
+- **Always Allow EVA** by [Falki](https://github.com/Falki-git) - Allows EVA even when EVA is disabled due to an obstacle. *Disabled by default, see the [Configuration](#Configuration) section for details.*
 #### VAB
 - **VAB Mission Tracker** by [munix](https://github.com/jan-bures) - Adds the Mission Tracker button to the VAB app
   tray.
